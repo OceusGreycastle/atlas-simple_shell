@@ -25,13 +25,13 @@ int main(int argc, char *argv[], char **environ)
 		{
 			break;
 		}
-
-		if (!strcmp(buffer, "quit\n"))
-		{
-			printf("==QUITTING SHELL==\n");
-			free(buffer);
-			return (0);
-		}
+/** Put this inside isbuiltin() function */
+//		if (!strcmp(buffer, "quit\n"))
+//		{
+//			printf("==QUITTING SHELL==\n");
+//			free(buffer);
+//			return (0);
+//		}
 
 		myArgc = tokenize(&array, buffer, " ");
 
