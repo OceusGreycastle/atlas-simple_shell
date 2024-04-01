@@ -12,7 +12,7 @@ a simple shell.
 
 <details><summary>Use and compile the Simple Shell</summary>
 
-This is how to use and compile a simple shell as well as what it does. It's quite "simple", once executed the shell will prompt a user for an input. Giving a basic input in the command line the Shell will give back the proper response and allow the user to continue prompting. Once the user sends in an exit prompt the Shell will terminate.
+This is how to use and compile a simple shell as well as what it does. It's quite "simple", once executed the shell will prompt a user for an input. Giving a basic input in the command line the Shell will give back the proper response and allow the user to continue prompting. Once the user sends in an exit prompt the Shell will terminate. This is the compiler lineup for the Simple Shell : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 </details>
 
 <details><summary>Usage of The Simple Shell</summary>
