@@ -1,30 +1,51 @@
 #include "shell.h"
 
-char **path_handler(char **environ, char *argv)
+char *path_handler(char **environ, char *argv[])
 {
 	char **paths = NULL;
 	char *pathenv = NULL;
 	char *path = NULL;
-	char *temp = NULL;
+	char *pathsString = NULL;
+	char *file = argv[1];
 	int i;
 
-	if (!environ)
+	if (!environ || !file)
 	{
 		return (NULL);
 	}
 
 	pathenv = _getenv(environ, "PATH");
 
-	path = malloc(strlen(pathenv) - strlen("PATH"));
+	pathsString = malloc(strlen(pathenv) - strlen("PATH"));
 
-	if (!path)
+	if (!pathsString)
 	{
 		return (NULL);
 	}
 
-	strcpy(path, pathenv + 5);
+	strcpy(pathsString, pathenv + 5);
 
-	tokenize(&paths, path, ":");
+	tokenize(&paths, pathsString, ":");
 
-	return (array);
+	for (i = 0; paths[i]; i++)
+	{
+		paths[i] = concat(paths[i], "/");
+		paths[i] = concat(paths[i], file);
+
+		if (access(paths[i], F_OK) == 0)
+		{
+				path = strdup(paths[i]);
+				break;
+		}
+
+	}
+
+	free(pathsString);
+	for (i = 0; paths[i]; i++)
+	{
+		free(paths[i]);
+	}
+	free(paths);
+
+	return (path);
 }

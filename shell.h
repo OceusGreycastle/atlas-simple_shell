@@ -5,7 +5,12 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 int tokenize(char **array[], char *buffer, const char *delim);
+char *path_handler(char **environ, char *argv[]);
+char *_getenv(char **environ, char *envVar);
+char *concat(char *dest, char *src);
 
 #endif

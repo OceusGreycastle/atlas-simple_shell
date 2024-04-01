@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void concat(char *dest, char *src)
+char *concat(char *dest, char *src)
 {
 	char *temp = NULL;
 
@@ -11,11 +11,11 @@ void concat(char *dest, char *src)
 	if (!dest)
 	{
 		dest = temp;
-		return (NULL);
+		return (dest);
 	}
 
 	strcpy(dest, temp);
+	free(temp);
 	strcat(dest, src);
-
-	return (dest);
+	return(dest);
 }

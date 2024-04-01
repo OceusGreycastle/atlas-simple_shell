@@ -12,7 +12,8 @@ char *_getenv(char **environ, char *envVar)
 
 	for (i = 0; environ[i]; i++)
 	{
-		if (strstr(tmp, environ[i]))
+
+		if (strstr(environ[i], tmp))
 		{
 			free(tmp);
 			return (environ[i]);
