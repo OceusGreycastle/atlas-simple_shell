@@ -1,5 +1,18 @@
 #include "shell.h"
 
+/**
+ * main - this function runs the shell and it's workings directly
+ * @argc: counts arguments and stores it as an int
+ * @argv: array of pointers to the array of character objects
+ * @environ: the environment for our variables
+ * 
+ * Description: This function refrences other
+ * functions such as isbuiltin and tokenize
+ * to run processes through the shell
+ * 
+ * Return: 0
+*/
+
 int main(int argc, char *argv[], char **environ)
 {
 	int myArgc = 0, i;
