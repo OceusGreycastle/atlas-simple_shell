@@ -2,7 +2,7 @@
 
 /**
  * path_handler - Checks for the given path and returns it
- * @environ: Environment for variables
+ * @environ: environmental variables
  * @argv: array of pointers to an array of character objects
  * 
  * Return: returns the path
