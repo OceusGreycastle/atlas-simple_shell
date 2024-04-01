@@ -24,3 +24,4 @@ Some examples of the Simple Shell in use:
 
 Thank you very much for coming and taking the time to enjoy our project and explore it for what it is. It was a long process, and your time is much appreciated, Happy Coding!
 
+![thankyou](https://github.com/OceusGreycastle/atlas-simple_shell/assets/143840095/a82a3d64-3380-4871-93a7-c151216d6b8d)
