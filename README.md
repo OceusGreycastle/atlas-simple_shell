@@ -11,3 +11,5 @@ a simple shell.
 
 
 <detail><summary>How to use and compile the Simple Shell</summary>
+
+It's quite "simple", once executed the shell will prompt a user for an input. Giving a basic input in the command line the Shell will give back the proper response and allow the user to continue prompting. Once the user sends in an exit prompt the Shell will terminate.
