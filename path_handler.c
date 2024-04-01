@@ -1,5 +1,13 @@
 #include "shell.h"
 
+/**
+ * path_handler - Checks for the given path and returns it
+ * @environ: Environment for variables
+ * @argv: array of pointers to an array of character objects
+ * 
+ * Return: returns the path
+*/
+
 char *path_handler(char **environ, char *argv[])
 {
 	char **paths = NULL;
