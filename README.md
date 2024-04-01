@@ -18,3 +18,9 @@ This is how to use and compile a simple shell as well as what it does. It's quit
 <details><summary>Usage of The Simple Shell</summary>
 
 Some examples of the Simple Shell in use: 
+</details>
+
+<details><summary>A Small Thank You</summary>
+
+Thank you very much for coming and taking the time to enjoy our project and explore it for what it is. It was a long process, and your time is much appreciated, Happy Coding!
+
