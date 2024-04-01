@@ -23,6 +23,7 @@ int tokenize(char **array[], char *buffer, const char *delim)
 {
 	size_t i;
 	int tokenNumber = 1;
+	char *token = NULL;
 
 	if (!buffer || buffer[0] == '\0')
 	{
@@ -46,12 +47,14 @@ int tokenize(char **array[], char *buffer, const char *delim)
 
 	i = 0;
 
-	(*array)[i] = strtok(buffer, delim);
+	token = strtok(buffer, delim);
 
-	while ((*array)[i] != NULL)
+	while (token != NULL)
 	{
+		(*array)[i] = strdup(token);
 		i++;
-		(*array)[i] = strtok(NULL, delim);
+		token = strtok(NULL, delim);
 	}
+	(*array)[i] = NULL;
 	return (tokenNumber);
 }
