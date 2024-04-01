@@ -9,8 +9,9 @@
 #include <unistd.h>
 
 int tokenize(char **array[], char *buffer, const char *delim);
-char *path_handler(char **environ, char *argv[]);
 char *_getenv(char **environ, char *envVar);
+char *path_handler(char **environ, char *argv[]);
 char *concat(char *dest, char *src);
+int isbuiltin(char *buffer, char **environ);
 
 #endif

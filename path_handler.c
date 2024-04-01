@@ -6,7 +6,7 @@ char *path_handler(char **environ, char *argv[])
 	char *pathenv = NULL;
 	char *path = NULL;
 	char *pathsString = NULL;
-	char *file = argv[1];
+	char *file = argv[0];
 	int i;
 
 	if (!environ || !file)

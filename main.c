@@ -5,12 +5,12 @@ int main(int argc, char *argv[], char **environ)
 	int myArgc = 0, i;
 	size_t size;
 	ssize_t chars_read;
-	char **array;
+	char **myArgv;
 	char *buffer;
 
 	while (1)
 	{
-		array = NULL;
+		myArgv = NULL;
 		buffer = NULL;
 		size = 0;
 		
@@ -25,25 +25,28 @@ int main(int argc, char *argv[], char **environ)
 		{
 			break;
 		}
-/** Put this inside isbuiltin() function */
-//		if (!strcmp(buffer, "quit\n"))
-//		{
-//			printf("==QUITTING SHELL==\n");
-//			free(buffer);
-//			return (0);
-//		}
-
-		myArgc = tokenize(&array, buffer, " ");
-
-		for (i = 0; i != 0; i++)
+		
+		if (!isbuiltin(buffer, environ))
 		{
-			printf("%s\n", array[i]);
+			myArgc = tokenize(&myArgv, buffer, " ");
+
+			path = path_handler(environ, myArgv);
+
+			if (!path)
+			{
+				perror("Error: ");
+			}
+			else {
+				fork_process(path);
+
+				for (i = 0; array[i]; i++)
+				{
+					free(myArgv[i]);
+				}
+			}
+			free(array);
 		}
-
-		printf("%i\n", myArgc);
-
 		free(buffer);
-		free(array);
 	}
 
 	return (0);
