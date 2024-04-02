@@ -2,10 +2,10 @@
 
 /**
  * _getenv - gets the environment for the given input
- * @environ: environmental variables
- * @envVar: Variable for referencing the environ
+ * @environ: array of pointers to environmental variables
+ * @envVar: requested variable
  * 
- * Return: The token number
+ * Return: Environmental Variable string
 */
 
 char *_getenv(char **environ, char *envVar)
