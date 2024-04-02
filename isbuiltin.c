@@ -14,12 +14,12 @@
 int isbuiltin(char *buffer, char **environ)
 {
 	int i;
-	if (!strcmp(buffer, "exit\n"))
+	if (!strcmp(buffer, "exit"))
 	{
 		exit(EXIT_SUCCESS);
 	}
 
-	if (!strcmp(buffer, "env\n"))
+	if (!strcmp(buffer, "env"))
 	{
 		for (i = 0; environ[i]; i++)
 		{

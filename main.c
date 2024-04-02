@@ -15,11 +15,12 @@
 
 int main(int argc, char *argv[], char **environ)
 {
-	int myArgc = 0, i;
+	int i;
 	size_t size;
 	ssize_t chars_read;
 	char **myArgv;
 	char *buffer;
+	char *path = NULL;
 
 	while (1)
 	{
@@ -38,26 +39,35 @@ int main(int argc, char *argv[], char **environ)
 		{
 			break;
 		}
+
+		i = 0;
+
+		while (buffer[i] != '\n')
+		{
+			i++;
+		}
+
+		buffer[i] = '\0';
 		
 		if (!isbuiltin(buffer, environ))
 		{
-			myArgc = tokenize(&myArgv, buffer, " ");
+			tokenize(&myArgv, buffer, " ");
 
 			path = path_handler(environ, myArgv);
 
 			if (!path)
 			{
 				perror("Error: ");
-			}
-			else {
-				fork_process(path);
+			} else
+			{
+				fork_process_and_execute(path, myArgv, environ);
 
-				for (i = 0; array[i]; i++)
+				for (i = 0; myArgv[i]; i++)
 				{
 					free(myArgv[i]);
 				}
 			}
-			free(array);
+			free(myArgv);
 		}
 		free(buffer);
 	}
