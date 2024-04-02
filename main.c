@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - this function runs the shell and it's workings directly
- * @argc: counts arguments and stores it as an int
- * @argv: array of pointers to the array of character objects
+ * main - Starts shell and takes user input and parses it
+ * @argc: Counts the number of arguements sent to the shell
+ * @argv: array of pointers to the arguments sent to shell
  * @environ: environmental variables
  * 
  * Description: This function refrences other

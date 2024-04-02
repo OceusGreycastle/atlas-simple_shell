@@ -2,10 +2,10 @@
 
 /**
  * concat - concatanates a string
- * @dest: destination variable
- * @src: string to be concatanated
+ * @dest: String to be concatanated onto
+ * @src: string to be concatanate onto dest
  * 
- * Return: dest
+ * Return: Concatanated string
 */
 
 char *concat(char *dest, char *src)

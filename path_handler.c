@@ -4,9 +4,9 @@
 /**
  * path_handler - Checks for the given path and returns it
  * @environ: environmental variables
- * @argv: array of pointers to an array of character objects
+ * @argv: array of pointers to arguements sent to the shell
  * 
- * Return: returns the path
+ * Return: returns the full path name for the function to be run
 */
 
 char *path_handler(char **environ, char *argv[])
