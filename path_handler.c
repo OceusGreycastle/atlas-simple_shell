@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <string.h>
 
 /**
  * path_handler - Checks for the given path and returns it

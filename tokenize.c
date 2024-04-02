@@ -1,4 +1,6 @@
 #include "shell.h"
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * tokenize - Creates an array of tokens
@@ -19,7 +21,7 @@
  * Return: The number of tokens in the array (or 0 on failure)
  */
 
-int tokenize(char **array[], char *buffer, const char *delim)
+int tokenize(char ***array, char *buffer, const char *delim)
 {
 	size_t i;
 	int tokenNumber = 1;
